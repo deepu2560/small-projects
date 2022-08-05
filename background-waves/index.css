@@ -1,0 +1,64 @@
+body {
+  margin: auto;
+  font-family: sans-serif;
+  overflow: auto;
+  background: linear-gradient(black, white);
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  background-color: rgb(173 216 230 / 55%);
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  background-color: rgb(173 216 230 / 85%);
+  bottom: -2.5em;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translate(1);
+  }
+  25% {
+    transform: translate(-25%);
+  }
+  50% {
+    transform: translate(-50%);
+  }
+  75% {
+    transform: translate(-25%);
+  }
+  100% {
+    transform: translate(1);
+  }
+}
+
+.moon {
+  width: 200px;
+  height: 200px;
+  background: rgba(245 222 179 / 90%);
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  border-radius: 100%;
+}
