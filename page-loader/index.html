@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Loader Demo</title>
+    <style>
+      #loader {
+        border: 12px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 12px solid #444444;
+        width: 70px;
+        height: 70px;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      img {
+        width: 400px;
+        opacity: 1;
+      }
+
+      .center {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loader" class="center"></div>
+    <h1>GeeksforGeeks</h1>
+    <h2>A computer science portal for geeks</h2>
+    <img
+      src="https://vastphotos.com/files/uploads/photos/11327/saint-peters-square-l.jpg?v=20220719081429"
+      alt="GeeksforGeeks logo"
+      onclick="mouseHover('enter')"
+      onmouseleave="mouseHover('leave')"
+    />
+    <script>
+      function mouseHover(prev) {
+        if (prev == "enter") {
+          document.querySelector("img").style.opacity = "0.5";
+        } else {
+          document.querySelector("img").style.opacity = "1";
+        }
+      }
+
+      setInterval(() => {
+        let imgLoading = document.querySelector("img").complete;
+
+        if (imgLoading) {
+          clearInterval();
+          document.querySelector("#loader").style.display = "none";
+        } else {
+          document.querySelector("#loader").style.visibility = "visible";
+        }
+      }, 200);
+
+      document.onreadystatechange = function () {
+        if (document.readyState !== "complete") {
+          document.querySelector("body").style.visibility = "hidden";
+          document.querySelector("#loader").style.visibility = "visible";
+        } else {
+          document.querySelector("#loader").style.display = "none";
+          document.querySelector("body").style.visibility = "visible";
+        }
+      };
+    </script>
+  </body>
+</html>

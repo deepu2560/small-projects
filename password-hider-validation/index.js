@@ -45,12 +45,12 @@ function checkPassword(data) {
   }
 }
 
-togglebtn.onclick = function () {
-  if (pswrd.type === "password") {
+function mouseHover(prev) {
+  if (pswrd.type === "password" || prev == "enter") {
     pswrd.setAttribute("type", "text");
     togglebtn.classList.add("hide");
   } else {
     pswrd.setAttribute("type", "password");
     togglebtn.classList.remove("hide");
   }
-};
+}
