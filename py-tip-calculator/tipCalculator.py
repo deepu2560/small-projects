@@ -13,4 +13,6 @@ total_percent = float(1) + percentage
 
 to_pay = total_bill * total_percent
 
-print(f"\nEach person should pay: $ {round(to_pay, 2)}")
+total_to_pay = "{:.2f}".format(to_pay)
+
+print(f"\nEach person should pay: $ {total_to_pay}")
