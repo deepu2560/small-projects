@@ -5,7 +5,7 @@ total_people = input("How many people to split the bill? \n")
 percent_input = input(
     "What percentage tip would you like to give? 10, 12 or 15? \n")
 
-total_bill = int(bill) / int(total_people)
+total_bill = float(bill) / int(total_people)
 
 percentage = int(percent_input) / 100
 
