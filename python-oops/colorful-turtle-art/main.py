@@ -2,7 +2,7 @@ from turtle import Turtle, Screen
 
 timmy_the_turtle = Turtle()
 
-
+print("hello world")
 def curve(num):
     for i in range(num):
         timmy_the_turtle.left(1)
@@ -26,3 +26,4 @@ timmy_the_turtle.end_fill()
 
 screen = Screen()
 screen.exitonclick()
+print("turtle graphic shape made")
