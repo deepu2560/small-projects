@@ -6,10 +6,9 @@ t.colormode(255)
 timmy_the_turtle = t.Turtle()
 timmy_the_turtle.speed("fastest")
 
-for _ in range(200):
-    timmy_the_turtle.circle(50)
-    timmy_the_turtle.right(10)
-    timmy_the_turtle.forward(10)
+for _ in range(100):
+    timmy_the_turtle.circle(100)
+    timmy_the_turtle.setheading(timmy_the_turtle.heading()+10)
 
 screen = t.Screen()
 screen.exitonclick()
