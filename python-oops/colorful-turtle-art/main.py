@@ -3,12 +3,10 @@ from turtle import Turtle, Screen
 timmy_the_turtle = Turtle()
 
 
-for _ in range(4):
-    for _ in range(5):
-        timmy_the_turtle.pendown()
-        timmy_the_turtle.forward(20)
-        timmy_the_turtle.penup()
-        timmy_the_turtle.forward(20)
-    timmy_the_turtle.left(90)
+for num in range(3, 10):
+    for _ in range(num):
+        timmy_the_turtle.forward(100)
+        timmy_the_turtle.left(360/num)
+
 
 print("turtle graphic shape made")
