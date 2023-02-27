@@ -1,16 +1,30 @@
-# This is a sample Python script.
+import colorgram
+import turtle as t
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+colors = colorgram.extract("image.jpg", 35)
+print(len(colors))
 
+draw = t.Turtle()
+t.colormode(255)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+count = -1
 
+# for num in range(1, 6):
+#     draw.penup()
+#     for _ in range(7):
+#         print(count)
+#         count += 1
+#         rgb = colors[count].rgb
+#         clr = (rgb.r, rgb.g, rgb.b)
+#         draw.pendown()
+#         draw.dot(20, clr)
+#         draw.forward(50)
+#         draw.penup()
+#     draw.penup()
+#     draw.home()
+#     draw.left(90)
+#     draw.forward(10*num)
+#     draw.right(90)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+screen = t.Screen()
+screen.exitonclick()
