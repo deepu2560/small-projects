@@ -1,8 +1,6 @@
 import turtle as trtl
 
 myturtle = trtl.Turtle()
-myturtle.shape("circle")
-myturtle.pensize(5)
 
 
 def move_forward():
