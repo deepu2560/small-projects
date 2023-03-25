@@ -29,11 +29,18 @@ while game_is_on:
     if snake.snake_head.distance(food) < 15:
         food.refresh()
         score.count_score()
+        snake.extend_snake()
 
-    snake_position = snake.check_wall_collision()
-    if snake_position:
+    if snake.check_wall_collision():
         game_is_on = False
         score.game_over()
+
+    for snk in snake.snakes:
+        if snk == snake.snake_head:
+            pass
+        elif snake.snake_head.distance(snk) < 10:
+            game_is_on=False
+            score.game_over()
 
 
 screen.exitonclick()
