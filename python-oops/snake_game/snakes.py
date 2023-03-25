@@ -14,7 +14,6 @@ class Snake:
             tim = Turtle("square")
             tim.color("white")
             tim.penup()
-            tim.speed(0.5)
             tim.goto(position)
             self.snakes.append(tim)
 
@@ -44,3 +43,11 @@ class Snake:
         pointing = int(round(self.snake_head.heading(), 0))
         if pointing != 180:
             self.snake_head.setheading(0)
+
+    def check_wall_collision(self):
+        x_coord = int(round(self.snake_head.xcor(), 0))
+        y_coord = int(round(self.snake_head.ycor(), 0))
+        if x_coord > 280 or y_coord > 270 or x_coord < -280 or y_coord < -280:
+            return True
+        else:
+            return False
