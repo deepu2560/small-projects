@@ -14,6 +14,7 @@ class Snake:
             tim = Turtle("square")
             tim.color("white")
             tim.penup()
+            tim.speed(0.5)
             tim.goto(position)
             self.snakes.append(tim)
 

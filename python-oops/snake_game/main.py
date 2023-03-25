@@ -1,5 +1,6 @@
 from turtle import Screen
 from snakes import Snake
+from food import Food
 import time
 
 screen = Screen()
@@ -9,6 +10,7 @@ screen.title("Snake Game")
 screen.tracer(0)
 
 snake = Snake()
+food = Food()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -21,6 +23,9 @@ while game_is_on:
     screen.update()
     time.sleep(0.1)
     snake.move()
+
+    if snake.snake_head.distance(food) < 15:
+        food.refresh()
 
 
 screen.exitonclick()
