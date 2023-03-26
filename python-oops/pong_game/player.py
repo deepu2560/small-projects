@@ -8,7 +8,7 @@ class Player(Turtle):
         self.penup()
         self.setheading(90)
         self.shape("square")
-        self.shapesize(stretch_len=3)
+        self.shapesize(stretch_len=3, stretch_wid=1)
 
     def move_up(self):
         if self.ycor() < 210:
