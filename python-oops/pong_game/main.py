@@ -4,7 +4,8 @@ from ball import Ball
 import time
 
 screen = Screen()
-screen.setup(width=600, height=500)
+screen.title("Pong Game")
+screen.setup(width=800, height=600)
 screen.bgcolor("black")
 screen.tracer(0)
 
