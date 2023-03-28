@@ -2,10 +2,11 @@ from turtle import Turtle
 
 
 class Player(Turtle):
-    def __init__(self):
+    def __init__(self, position, clr):
         super().__init__()
-        self.color("white")
         self.penup()
+        self.color(clr)
+        self.goto(position)
         self.shape("square")
         self.shapesize(stretch_len=1, stretch_wid=5)
 
