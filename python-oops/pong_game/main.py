@@ -25,7 +25,7 @@ screen.onkey(player_one.move_down, "s")
 game_is_on = True
 
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(ball.ball_speed)
     screen.update()
     ball.move()
 
@@ -35,13 +35,12 @@ while game_is_on:
     if ball.distance(player_two) < 60 and ball.xcor() > 320 or ball.distance(player_one) < 60 and ball.xcor() < -320:
         ball.bounce_x()
 
-    if ball.xcor() > 370:
+    if ball.xcor() > 340:
         score.left_scored()
-        ball.home()
-    elif ball.xcor() < -370:
+        ball.reset_ball()
+    elif ball.xcor() < -340:
         score.right_scored()
-        ball.home()
-        ball.bounce_x()
+        ball.reset_ball()
 
     if score.score_left >= 10:
         score.who_won(player="Red")
