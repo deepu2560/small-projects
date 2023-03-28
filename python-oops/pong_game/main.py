@@ -32,7 +32,7 @@ while game_is_on:
     if ball.ycor() > 270 or ball.ycor() < -270:
         ball.bounce_y()
 
-    if ball.distance(player_two) < 50 and ball.xcor() > 320 or ball.distance(player_one) < 50 and ball.xcor() < -320:
+    if ball.distance(player_two) < 60 and ball.xcor() > 320 or ball.distance(player_one) < 60 and ball.xcor() < -320:
         ball.bounce_x()
 
     if ball.xcor() > 370:
@@ -41,6 +41,7 @@ while game_is_on:
     elif ball.xcor() < -370:
         score.right_scored()
         ball.home()
+        ball.bounce_x()
 
     if score.score_left >= 2:
         score.who_won(player="Red")
