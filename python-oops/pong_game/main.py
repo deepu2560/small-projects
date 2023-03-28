@@ -43,10 +43,10 @@ while game_is_on:
         ball.home()
         ball.bounce_x()
 
-    if score.score_left >= 2:
+    if score.score_left >= 10:
         score.who_won(player="Red")
         game_is_on = False
-    elif score.score_right >= 2:
+    elif score.score_right >= 10:
         score.who_won(player="Blue")
         game_is_on = False
 
