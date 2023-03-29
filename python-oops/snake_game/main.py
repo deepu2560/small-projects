@@ -32,13 +32,12 @@ while game_is_on:
         snake.extend_snake()
 
     if snake.check_wall_collision():
-        game_is_on = False
-        score.game_over()
+        score.reset_score()
+        snake.reset_snake()
 
     for snk in snake.snakes[:1:-2]:
         if snake.snake_head.distance(snk) < 20:
-            game_is_on=False
-            score.game_over()
-
+            score.reset_score()
+            snake.reset_snake()
 
 screen.exitonclick()

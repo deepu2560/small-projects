@@ -50,6 +50,13 @@ class Snake:
         if pointing != 180:
             self.snake_head.setheading(0)
 
+    def reset_snake(self):
+        for snake in self.snakes:
+            snake.goto(10000, 20000)
+        self.snakes.clear()
+        self.create_snake()
+        self.snake_head = self.snakes[0]
+
     def check_wall_collision(self):
         x_coord = int(round(self.snake_head.xcor(), 0))
         y_coord = int(round(self.snake_head.ycor(), 0))
