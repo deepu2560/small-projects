@@ -8,15 +8,24 @@
 // static property
 // static method
 // get and set
-class Hero {
+// super class
+class Person {
+    constructor(canwalk) {
+        this.canwalk = canwalk;
+    }
+}
+class Hero extends Person {
     //--------------------------------------
-    constructor(ntitle) {
-        this.title = "Batman";
-        this._firstname = "Bruce";
-        this._lastname = "Wayne";
-        this.title = ntitle;
+    constructor(title, _firstname, _lastname, ncw) {
+        super(ncw);
+        this.title = title;
+        this._firstname = _firstname;
+        this._lastname = _lastname;
     }
     //--------------------------------------
+    fullname() {
+        return this._firstname + " " + this._lastname;
+    }
     get firstname() {
         return this._firstname;
     }
@@ -31,3 +40,7 @@ class Hero {
     }
 }
 Hero.version = 1001;
+let hero = new Hero("Spiderman", "Peter", "Parker", "I can fly");
+console.log(hero.title);
+console.log(hero.firstname);
+console.log(hero.canwalk);
