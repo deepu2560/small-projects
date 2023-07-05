@@ -29,3 +29,11 @@ while is_game_on:
 
     if chances >= 50:
         is_game_on = False
+
+
+# def get_mouse_click_coor(x, y):
+#     print(x, y)
+
+# turtle.onscreenclick(get_mouse_click_coor)
+
+# turtle.mainloop()
