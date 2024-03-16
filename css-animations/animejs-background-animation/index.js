@@ -21,7 +21,7 @@ function animateBlocks(){
         easing: "linear",
         duration: 3000,
         delay: anime.stagger(10),
-        complete: animateBlocks(),
+        complete: animateBlocks,
     })
 }
 
